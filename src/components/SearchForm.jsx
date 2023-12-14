@@ -1,13 +1,11 @@
 import icons from "../img/symbol-defs.svg";
 
-function SearchForm() {
+function SearchForm({ filter, setFilter }) {
   return (
     <form className="main__search">
-      <button type="submit" className="main__searchbtn">
-        <svg className="main__svg">
-          <use xlinkHref={`${icons}#icon-search-1`} />
-        </svg>
-      </button>
+      <svg className="main__svg">
+        <use xlinkHref={`${icons}#icon-search-1`} />
+      </svg>
 
       <input
         className="main__input"
@@ -15,8 +13,8 @@ function SearchForm() {
         autoComplete="off"
         autoFocus
         placeholder="Search"
-        // onChange={handleChange}
-        // value={value}
+        value={filter || ""}
+        onChange={(e) => setFilter(e.target.value)}
       />
     </form>
   );

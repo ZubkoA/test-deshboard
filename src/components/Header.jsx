@@ -1,11 +1,11 @@
 import NameSection from "./NameSection";
 import SearchForm from "./SearchForm";
 
-function Header() {
+function Header({ filter, setFilter }) {
   return (
     <div className="main__header">
       <NameSection />
-      <SearchForm />
+      <SearchForm filter={filter} setFilter={setFilter} />
     </div>
   );
 }
