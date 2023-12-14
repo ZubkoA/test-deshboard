@@ -1,8 +1,12 @@
+import Header from "./Header";
+
 function Customers() {
   return (
-    <div>
-      <h2>Customers</h2>
-    </div>
+    <section className="main__section">
+      <Header />
+      {/* <Table /> */}
+      {/* <Pagination/> */}
+    </section>
   );
 }
 export default Customers;

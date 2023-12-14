@@ -1,8 +1,10 @@
 import { Outlet } from "react-router-dom";
+import User from "./User";
 
 function Main() {
   return (
-    <div>
+    <div className="main">
+      <User />
       <Outlet />
     </div>
   );

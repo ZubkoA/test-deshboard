@@ -1,14 +1,13 @@
 import AppNav from "./AppNav";
+import Footer from "./Footer";
+import Logo from "./Logo";
 
 function SideBar() {
   return (
     <div className="sidebar">
-      {/* <Logo /> */}
+      <Logo />
       <AppNav />
-
-      <footer>
-        <p>&copy; Copyright {new Date().getFullYear()} by WorldWise Inc</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
