@@ -1,16 +1,14 @@
 {
   "files": {
-    "main.css": "/test-deshboard/static/css/main.f855e6bc.css",
-    "main.js": "/test-deshboard/static/js/main.aee70f6f.js",
-    "static/js/787.1cd31a9e.chunk.js": "/test-deshboard/static/js/787.1cd31a9e.chunk.js",
-    "static/media/logo.svg": "/test-deshboard/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/test-deshboard/static/css/main.a557f50c.css",
+    "main.js": "/test-deshboard/static/js/main.eea34403.js",
+    "static/media/symbol-defs.svg": "/test-deshboard/static/media/symbol-defs.703f66a7b59b769b16aaec9a2374b38b.svg",
     "index.html": "/test-deshboard/index.html",
-    "main.f855e6bc.css.map": "/test-deshboard/static/css/main.f855e6bc.css.map",
-    "main.aee70f6f.js.map": "/test-deshboard/static/js/main.aee70f6f.js.map",
-    "787.1cd31a9e.chunk.js.map": "/test-deshboard/static/js/787.1cd31a9e.chunk.js.map"
+    "main.a557f50c.css.map": "/test-deshboard/static/css/main.a557f50c.css.map",
+    "main.eea34403.js.map": "/test-deshboard/static/js/main.eea34403.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.aee70f6f.js"
+    "static/css/main.a557f50c.css",
+    "static/js/main.eea34403.js"
   ]
 }
