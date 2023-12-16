@@ -9,9 +9,10 @@ function Tables({
   previousPage,
   prepareRow,
   data,
+  canNextPage,
+  canPreviousPage,
+  gotoPage,
 }) {
-  console.log(data);
-  console.log(page);
   return (
     <div>
       <table {...getTableProps()} className="table__container">
@@ -41,20 +42,40 @@ function Tables({
           })}
         </tbody>
       </table>
-      <div className="table__container">
+
+      <div className="table__wrap">
         <p className="table__show">
           Showing data <span>{page.length !== 0 ? page[0].index + 1 : 0}</span>{" "}
-          to <span>{page.length}</span> of <span>{data.length}</span>
+          to <span>{page.length}</span> of <span>{data.length} </span>
           entries
         </p>
-        <span>
-          Page
-          <strong>
-            {pageIndex + 1} of {pageOptions.length}
-          </strong>
-        </span>
-        <button onClick={() => previousPage()}>-</button>
-        <button onClick={() => nextPage()}>+</button>
+
+        <div className="table__pagination">
+          <button
+            className="table__page"
+            onClick={() => previousPage()}
+            disabled={!canPreviousPage}
+          >
+            {"<"}
+          </button>{" "}
+          {pageOptions &&
+            pageOptions.map((el, index) => (
+              <button
+                key={index}
+                className={`table__page ${pageIndex === index ? "active" : ""}`}
+                onClick={() => gotoPage(index)}
+              >
+                {el + 1}
+              </button>
+            ))}
+          <button
+            className="table__page"
+            onClick={() => nextPage()}
+            disabled={!canNextPage}
+          >
+            {">"}
+          </button>{" "}
+        </div>
       </div>
     </div>
   );

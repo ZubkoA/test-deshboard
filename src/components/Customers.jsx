@@ -59,9 +59,10 @@ function Customers() {
     nextPage,
     previousPage,
     setGlobalFilter,
-    // canNextPage,
-    // canPreviousPage,
+    canNextPage,
+    canPreviousPage,
     pageOptions,
+    gotoPage,
     state,
     prepareRow,
   } = useTable(
@@ -74,6 +75,7 @@ function Customers() {
     usePagination
   );
   const { pageIndex, globalFilter } = state;
+  console.log(page);
   return (
     <section className="main__section">
       <Header filter={globalFilter} setFilter={setGlobalFilter} />
@@ -88,6 +90,9 @@ function Customers() {
         previousPage={previousPage}
         prepareRow={prepareRow}
         data={data}
+        canNextPage={canNextPage}
+        canPreviousPage={canPreviousPage}
+        gotoPage={gotoPage}
       />
     </section>
   );

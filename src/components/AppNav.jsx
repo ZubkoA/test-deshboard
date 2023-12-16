@@ -5,7 +5,7 @@ export default function AppNav() {
   return (
     <nav className="sidebar__navwrap">
       <ul className="sidebar__ul">
-        <li className="sidebar__list">
+        <li>
           <NavLink to="product" className="sidebar__nav">
             <svg className="sidebar__svg">
               <use xlinkHref={`${icons}#icon-key-square`} />

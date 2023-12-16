@@ -4,8 +4,7 @@
   --color-accent: #5932ea;
   --color-active--1: #ffc5c5;
   --color-active--2: #df0404;
-  --color-inactive--0: rgba(22, 192, 152, 0.38);
-  --color-inactive--1: #16c098;
+  --color-inactive--1: 22, 192, 152;
   --color-inactive--2: #00b087;
   --color-inactive--3: #008767;
 
@@ -18,9 +17,10 @@
   --color-light--3: #9197b3;
   --color-light--4: #b5b7c0;
   --color-light--5: #eeeeee;
-  --color-light--6: #f9fbff;
-  --color-light--7: #fafbff;
-  --color-light--8: #ffffff;
+  --color-light--6: #f5f5f5;
+  --color-light--7: #f9fbff;
+  --color-light--8: #fafbff;
+  --color-light--9: #ffffff;
 }
 
 * {
@@ -36,8 +36,15 @@ body {
   font-style: normal;
   line-height: normal;
   color: var(--color-dark--1);
-  background: var(--color-light--7);
+  background: var(--color-light--8);
 }
+
+/* const viewport = {
+  mob: '@media screen and (max-width: 767px)',
+  tab: '@media screen and (min-width: 768px)',
+  desk: '@media screen and (min-width: 1440px)',
+}; */
+
 .app {
   height: 100vh;
   display: flex;
@@ -46,7 +53,7 @@ body {
 .sidebar {
   flex-basis: 306px;
   padding: 36px 28px 78px 28px;
-  background-color: var(--color-light--8);
+  background-color: var(--color-light--9);
 
   display: flex;
   flex-direction: column;
@@ -89,43 +96,41 @@ body {
   gap: 20px;
 }
 
-.sidebar__list {
-  padding: 12px;
-}
-.sidebar__list--active {
-  background-color: var(--color-accent);
-  border-radius: 8px;
-}
 .sidebar__nav {
   display: flex;
   flex-direction: row;
+  padding: 12px;
   align-items: center;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: -0.14px;
   color: var(--color-light--3);
+  fill: var(--color-light--3);
+  stroke: var(--color-light--3);
   cursor: pointer;
+}
+.active {
+  background-color: var(--color-accent);
+  border-radius: 8px;
+
+  color: var(--color-light--9);
+  fill: var(--color-light--9);
+  stroke: var(--color-light--9);
 }
 
 .sidebar__svg {
   padding-right: 14px;
   width: 24px;
   height: 24px;
-  fill: var(--color-light--3);
-  stroke: var(--color-light--3);
+  fill: inherit;
+  stroke: inherit;
 }
-.sidebar__svg {
-  fill: var(--color-light--8);
-}
+
 .sidebar__svgright {
   width: 16px;
   height: 16px;
   margin-left: auto;
-  stroke: var(--color-light--3);
-}
-
-.sidebar__svgright--accent {
-  stroke: var(--color-light--8);
+  stroke: inherit;
 }
 
 .sidebar__footer {
@@ -155,7 +160,7 @@ body {
 }
 
 .main__section {
-  background-color: var(--color-light--8);
+  background-color: var(--color-light--9);
   filter: drop-shadow(0px 10px 60px rgba(226, 236, 249, 0.5));
   border-radius: 10px;
   padding: 30px 44px 40px 38px;
@@ -184,7 +189,7 @@ body {
 }
 
 .main__members {
-  color: var(--color-inactive--1);
+  color: rgba(var(--color-inactive--1));
   font-size: 14px;
   font-weight: 400;
   letter-spacing: -0.14px;
@@ -197,7 +202,7 @@ body {
   width: 100%;
   padding: 7px;
   max-width: 216px;
-  background-color: var(--color-light--6);
+  background-color: var(--color-light--7);
   border-radius: 10px;
   overflow: hidden;
 }
@@ -267,7 +272,7 @@ body {
 }
 .table__btn--active {
   border: 1px solid var(--color-inactive--2);
-  background: var(--color-inactive--0);
+  background: rgba(var(--color-inactive--1), 0.38);
   color: var(--color-inactive--3);
 }
 .table__btn--inactive {
@@ -278,12 +283,42 @@ body {
   color: var(--color-active--2);
 }
 
-.table__container {
+.table__wrap {
   margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .table__show {
   color: var(--color-light--4);
   font-size: 14px;
   letter-spacing: -0.14px;
+}
+
+.table__pagination {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.table__page {
+  border: 1px solid var(--color-light--5);
+  height: 24px;
+  width: 26px;
+  border-radius: 4px;
+  background-color: var(--color-light--6);
+  cursor: pointer;
+
+  color: var(--color-dark--2);
+  font-size: 12px;
+  letter-spacing: -0.12px;
+}
+.table__page:hover {
+  background-color: var(--color-light--5);
+}
+.table__page:active,
+.table__page:focus {
+  background-color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  color: var(--color-light--9);
 }
