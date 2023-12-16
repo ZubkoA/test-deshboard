@@ -11,7 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/test-deshboard" element={<AppLayout />}>
+        <Route path="/" element={<AppLayout />}>
           <Route index element={<Navigate replace to="customers" />} />
           <Route path="customers" element={<Customers />} />
           <Route path="income" element={<Income />} />
