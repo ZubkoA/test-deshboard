@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/test-deshboard/static/css/main.a557f50c.css",
-    "main.js": "/test-deshboard/static/js/main.eea34403.js",
+    "main.css": "/test-deshboard/static/css/main.3e8993db.css",
+    "main.js": "/test-deshboard/static/js/main.2f308ba3.js",
     "static/media/symbol-defs.svg": "/test-deshboard/static/media/symbol-defs.703f66a7b59b769b16aaec9a2374b38b.svg",
     "index.html": "/test-deshboard/index.html",
-    "main.a557f50c.css.map": "/test-deshboard/static/css/main.a557f50c.css.map",
-    "main.eea34403.js.map": "/test-deshboard/static/js/main.eea34403.js.map"
+    "main.3e8993db.css.map": "/test-deshboard/static/css/main.3e8993db.css.map",
+    "main.2f308ba3.js.map": "/test-deshboard/static/js/main.2f308ba3.js.map"
   },
   "entrypoints": [
-    "static/css/main.a557f50c.css",
-    "static/js/main.eea34403.js"
+    "static/css/main.3e8993db.css",
+    "static/js/main.2f308ba3.js"
   ]
 }
